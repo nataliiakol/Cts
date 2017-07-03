@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections;
+using ClassLibrary1.Users;
 
-namespace ClassLibrary1.Users
+namespace CTS.BusinessLayer.Users
 {
+    public delegate void DisplayMessage(string message);
     public class Developer : SystemUser, IComparable
     {
-        public void DoTask() {
-            
-        }
-
-        public void EstimateTask() {
-            throw new System.NotImplementedException();
-        }
-
         public Developer() {
             
         }
@@ -32,5 +26,17 @@ namespace ClassLibrary1.Users
             else
                 throw new ArgumentException("Object is not a Tester");
         }
+
+        public static void DoTask(DisplayMessage message)
+        {
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine(message);
+        }
+
+        public void EstimateTask()
+        {
+            throw new System.NotImplementedException();
+        }
+
     }
 }

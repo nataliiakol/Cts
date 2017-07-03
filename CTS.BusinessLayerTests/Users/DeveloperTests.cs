@@ -1,4 +1,5 @@
 ﻿using ClassLibrary1.Users;
+using CTS.BusinessLayer.Users;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CTS.BusinessLayerTests.Users
@@ -6,6 +7,14 @@ namespace CTS.BusinessLayerTests.Users
     [TestClass()]
     public class DeveloperTests
     {
+        [TestMethod()]
+        public void DoTaskTest()
+        {
+            Developer developer1 = new Developer();
+            DisplayMessage messageDelegate = new DisplayMessage(DoTask);
+
+        }
+
         [TestMethod()]
         public void CompareToWithoutSalaryTest()
         {
