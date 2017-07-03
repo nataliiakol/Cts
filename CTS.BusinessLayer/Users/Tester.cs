@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace ClassLibrary1.Users
+namespace CTS.BusinessLayer.Users
 {
     public class Tester : SystemUser, IComparable {
-        public void TestTask() { }
 
         public void EstimateTask() {
             throw new System.NotImplementedException();
@@ -25,7 +24,13 @@ namespace ClassLibrary1.Users
                  throw new ArgumentException("Object is not a Tester");
                 
         }
+        public static string DoTask(string message)
+        {
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine(message);
+            return message;
         }
+    }
 
     }
 

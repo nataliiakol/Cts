@@ -1,6 +1,8 @@
 ﻿using System;
 
-namespace ClassLibrary1.Users {
+namespace CTS.BusinessLayer.Users {
+
+    public delegate string DisplayMessage(string message);
     public abstract class SystemUser {
         public string UserId { get; set; }
         public string Name { get; set; }
@@ -20,5 +22,9 @@ namespace ClassLibrary1.Users {
         }
 
         protected SystemUser() { }
+
+        public void ReceiveSalary() {           
+            Console.WriteLine("I received salary today!"+Salary);
+        }
     }
 }

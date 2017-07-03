@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClassLibrary1.Users;
+using CTS.BusinessLayer.Users;
 
 namespace CTS.DataLayer
 {

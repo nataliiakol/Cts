@@ -1,6 +1,8 @@
-﻿using ClassLibrary1.Users;
+﻿using System.Security.Cryptography.X509Certificates;
+using ClassLibrary1.Users;
 using CTS.BusinessLayer.Users;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 
 namespace CTS.BusinessLayerTests.Users
 {
@@ -8,11 +10,19 @@ namespace CTS.BusinessLayerTests.Users
     public class DeveloperTests
     {
         [TestMethod()]
+        public void DoWorkTest()
+        {
+            DisplayMessage messageDelegate = new DisplayMessage(Developer.DoTask);
+            Developer.DoWork(messageDelegate);
+        }
+
+        [TestMethod()]
         public void DoTaskTest()
         {
-            Developer developer1 = new Developer();
-            DisplayMessage messageDelegate = new DisplayMessage(DoTask);
-
+            string expectedResult = "Hello, I develop!";
+            DisplayMessage messageDelegate = new DisplayMessage(Developer.DoTask);
+            string actualResult=messageDelegate("Hello, I develop!");
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod()]
