@@ -15,9 +15,11 @@ namespace CTS.ApplicationLayer
         {
             Application.FillData();
             Application.CompanyGiveSalary();
+            Application.CompanyGiveTasks();
             Reports.Reports.GenerateDevelopersReportByLevel(CompanyStorage.Developers);
             Reports.Reports.GenerateReportSortedTestersBySalary(CompanyStorage.Testers);
             Reports.Reports.GenerateReportFindUsersByName(CompanyStorage.Developers, CompanyStorage.Testers);
+            Reports.Reports.GenerateReportSortedDevelopersByTasksAmount(CompanyStorage.Developers);
         }
     }
 }

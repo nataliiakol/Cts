@@ -14,10 +14,15 @@ namespace CTS.ApplicationLayer
             Filler.FillManager();
             Filler.FillDevelopers();
             Filler.FillTesters();
+            Filler.FillTasks();
         }
 
         public static void CompanyGiveSalary() {
             Filler.Company.GiveSalary();
+        }
+
+        public static void CompanyGiveTasks() {
+            Filler.Company.GiveTasks();
         }
     }
 }

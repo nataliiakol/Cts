@@ -25,7 +25,7 @@ namespace CTS.BusinessLayer
             OnSalaryGiven?.Invoke();
         }
 
-        public virtual void GiveTasks() {
+        public void GiveTasks() {
             OnTasksGive?.Invoke(Tasks);
         }
 

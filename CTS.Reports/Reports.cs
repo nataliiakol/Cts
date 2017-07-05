@@ -35,7 +35,7 @@ namespace CTS.Reports {
                 select developer;
             Console.WriteLine("This are developers sorted by amount of tasks:");
             foreach (var developer in developersSortedByTasks) {
-                Console.WriteLine(developer.ToString());
+                Console.WriteLine("Name: " + developer.Name + "Number of tasks: " + developer.tasksToDo.Count);
             }
         }
 
@@ -47,7 +47,7 @@ namespace CTS.Reports {
             var systemUsersFoundByName = from user in systemUsers
                 where user.Name == "Nik"
                 select user;
-            Console.WriteLine("This are developers sorted by amount of tasks:");
+            Console.WriteLine("This are users with name Nik:");
             foreach (var user in systemUsersFoundByName)
             {
                 Console.WriteLine(user.ToString());

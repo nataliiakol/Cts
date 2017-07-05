@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CTS.BusinessLayer;
 using CTS.BusinessLayer.Users;
+using Task = CTS.BusinessLayer.Tasks.Task;
 
 namespace CTS.ApplicationLayer
 {
@@ -34,6 +35,16 @@ namespace CTS.ApplicationLayer
             CompanyStorage.Developers.Add(new Developer() { Name = "Buffy", vSeniorityLevel = DevelopmentTeamUser.SeniorityLevel.middle, Salary = 3000 });
             CompanyStorage.Developers.Add(new Developer() { Name = "Willow", vSeniorityLevel = DevelopmentTeamUser.SeniorityLevel.middle, Salary = 2500 });
             CompanyStorage.Developers.Add(new Developer() { Name = "Penny", vSeniorityLevel = DevelopmentTeamUser.SeniorityLevel.junior, Salary = 1200 });
+        }
+
+        public static void FillTasks() {
+            CompanyStorage.Tasks = new List<BusinessLayer.Tasks.Task>();
+            CompanyStorage.Tasks.Add(new BusinessLayer.Tasks.Task() { vPriority = BusinessLayer.Tasks.Task.Priority.low });
+            CompanyStorage.Tasks.Add(new BusinessLayer.Tasks.Task() { vPriority = BusinessLayer.Tasks.Task.Priority.high });
+            CompanyStorage.Tasks.Add(new BusinessLayer.Tasks.Task() { vPriority = BusinessLayer.Tasks.Task.Priority.low });
+            CompanyStorage.Tasks.Add(new BusinessLayer.Tasks.Task() { vPriority = BusinessLayer.Tasks.Task.Priority.medium });
+            CompanyStorage.Tasks.Add(new BusinessLayer.Tasks.Task() { vPriority = BusinessLayer.Tasks.Task.Priority.medium });
+            CompanyStorage.Tasks.Add(new BusinessLayer.Tasks.Task() { vPriority = Task.Priority.low });
         }
 
         public static void FillManager() {
