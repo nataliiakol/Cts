@@ -1,13 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ClassLibrary1.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CTS.BusinessLayer.Users;
+﻿using CTS.BusinessLayer.Users;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ClassLibrary1.Users.Tests
+namespace CTS.BusinessLayerTests.Users
 {
     [TestClass()]
     public class TesterTests
@@ -17,8 +11,8 @@ namespace ClassLibrary1.Users.Tests
             int expectedResult = -1;
             Tester tester1 = new Tester();
             Tester tester2 = new Tester();
-            tester1.vSeniorityLevel = SystemUser.SeniorityLevel.junior;
-            tester2.vSeniorityLevel = SystemUser.SeniorityLevel.middle;
+            tester1.vSeniorityLevel = DevelopmentTeamUser.SeniorityLevel.junior;
+            tester2.vSeniorityLevel = DevelopmentTeamUser.SeniorityLevel.middle;
             int actualResult = tester1.CompareTo(tester2);
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -29,8 +23,8 @@ namespace ClassLibrary1.Users.Tests
             int expectedResult = 0;
             Tester tester1 = new Tester();
             Tester tester2 = new Tester();
-            tester1.vSeniorityLevel = SystemUser.SeniorityLevel.senior;
-            tester2.vSeniorityLevel = SystemUser.SeniorityLevel.senior;
+            tester1.vSeniorityLevel = DevelopmentTeamUser.SeniorityLevel.senior;
+            tester2.vSeniorityLevel = DevelopmentTeamUser.SeniorityLevel.senior;
             int actualResult = tester1.CompareTo(tester2);
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -38,10 +32,10 @@ namespace ClassLibrary1.Users.Tests
         [TestMethod()]
         public void ToStringTest()
         {
-            string expectedResult = "Tester\r\nName: NIK\r\nUser ID: 0192394";
+            string expectedResult = "Tester\r\nName: NIK\r\nSalary: 1000";
             var tester = new Tester();
             tester.Name = "NIK";
-            tester.UserId = "0192394";
+            tester.Salary = 1000;
             string actualResult = tester.ToString();
             Assert.AreEqual(expectedResult, actualResult);
         }

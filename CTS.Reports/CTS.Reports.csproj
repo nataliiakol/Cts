@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5356C192-582B-455D-A067-9F871EE92E33}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{6ECC8A73-5E51-41E6-8671-474AAE0760B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CTS.ApplicationLayer</RootNamespace>
-    <AssemblyName>CTS.ApplicationLayer</AssemblyName>
+    <RootNamespace>CTS.Reports</RootNamespace>
+    <AssemblyName>CTS.Reports</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,22 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.cs" />
-    <Compile Include="Filler.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Reports.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CTS.BusinessLayer\CTS.BusinessLayer.csproj">
       <Project>{2A9AFD73-D191-4B6F-9C04-A2D549A13E0A}</Project>
       <Name>CTS.BusinessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CTS.Reports\CTS.Reports.csproj">
-      <Project>{6ECC8A73-5E51-41E6-8671-474AAE0760B7}</Project>
-      <Name>CTS.Reports</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

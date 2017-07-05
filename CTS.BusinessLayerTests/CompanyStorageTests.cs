@@ -14,9 +14,9 @@ namespace CTS.BusinessLayerTests
             Developer dev = new Developer();
             Tester tester = new Tester();
             dev.Salary = 1000;
+            dev.Name = "Nik";
             tester.Salary = 2000;
-            company.OnSalaryGiven += dev.ReceiveSalary;
-            company.OnSalaryGiven += tester.ReceiveSalary;
+            tester.Name = "Leo";
             company.GiveSalary();
         }
     }

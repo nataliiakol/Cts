@@ -8,6 +8,6 @@ using CTS.BusinessLayer.Users;
 namespace CTS.DataLayer
 {
     public abstract class SystemUserFactory {
-        public abstract SystemUser GetSystemUser();
+        public abstract DevelopmentTeamUser GetSystemUser();
     }
 }

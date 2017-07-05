@@ -1,4 +1,4 @@
-﻿using ClassLibrary1.Tasks;
+﻿using CTS.BusinessLayer.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CTS.BusinessLayerTests.Tasks

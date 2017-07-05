@@ -3,12 +3,12 @@
 namespace CTS.BusinessLayer.Users {
 
     public delegate string DisplayMessage(string message);
-    public abstract class SystemUser {
+
+    public abstract class DevelopmentTeamUser : ISystemUser {
         public string UserId { get; set; }
         public string Name { get; set; }
         public int Salary { get; set; }
         public SeniorityLevel vSeniorityLevel { get; set; }
-
 
         public enum SeniorityLevel {
             junior,
@@ -16,15 +16,21 @@ namespace CTS.BusinessLayer.Users {
             senior
         }
 
-        protected SystemUser(string UserId, string Name) {
+        protected DevelopmentTeamUser(string UserId, string Name) {
             this.Name = Name;
             this.UserId = UserId;
         }
 
-        protected SystemUser() { }
+        protected DevelopmentTeamUser() {
+            CompanyStorage.OnSalaryGiven += new SalaryTime(ReceiveSalary);
+        }
 
         public void ReceiveSalary() {           
-            Console.WriteLine("I received salary today!"+Salary);
+            Console.WriteLine("My name is " + Name + ", I received "+Salary);
+        }
+
+        public override string ToString() {
+            return Name + " " + vSeniorityLevel;
         }
     }
 }

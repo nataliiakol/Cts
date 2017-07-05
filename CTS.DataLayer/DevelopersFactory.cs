@@ -9,7 +9,7 @@ namespace CTS.DataLayer
 {
     public class DevelopersFactory : SystemUserFactory
     {
-        public override SystemUser GetSystemUser() {
+        public override DevelopmentTeamUser GetSystemUser() {
             return new Developer();
         }
     }

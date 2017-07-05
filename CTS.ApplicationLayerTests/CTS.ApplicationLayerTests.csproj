@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7E33E313-D475-4039-9F41-C42289CA64D4}</ProjectGuid>
+    <ProjectGuid>{B18EC832-C078-417F-9948-BF7F9B4FAA89}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CTS.BusinessLayerTests</RootNamespace>
-    <AssemblyName>CTS.BusinessLayerTests</AssemblyName>
+    <RootNamespace>CTS.ApplicationLayerTests</RootNamespace>
+    <AssemblyName>CTS.ApplicationLayerTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -51,17 +51,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CompanyStorageTests.cs" />
+    <Compile Include="ProgramTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tasks\TaskTests.cs" />
-    <Compile Include="Users\DeveloperTests.cs" />
-    <Compile Include="Users\ManagerTests.cs" />
-    <Compile Include="Users\TesterTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CTS.BusinessLayer\CTS.BusinessLayer.csproj">
-      <Project>{2A9AFD73-D191-4B6F-9C04-A2D549A13E0A}</Project>
-      <Name>CTS.BusinessLayer</Name>
+    <ProjectReference Include="..\CTS.ApplicationLayer\CTS.ApplicationLayer.csproj">
+      <Project>{5356C192-582B-455D-A067-9F871EE92E33}</Project>
+      <Name>CTS.ApplicationLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

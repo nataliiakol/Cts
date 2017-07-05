@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using CTS.BusinessLayer.Tasks;
 
 namespace CTS.BusinessLayer.Users
 {
 
-    public class Developer : SystemUser, IComparable
-    {
+    public class Developer : DevelopmentTeamUser, IComparable {
+
+        public List<Task> tasksToDo;
         public Developer() {
-            
+            tasksToDo = new List<Task>();
         }
 
         public int CompareTo(object obj) {
-            int developersComparison=1;
+            if (obj == null) return 1;
             Developer otherDeveloper = obj as Developer;
             if (otherDeveloper != null) {
-                developersComparison = this.vSeniorityLevel.CompareTo(otherDeveloper.vSeniorityLevel);
+                int developersComparison = this.vSeniorityLevel.CompareTo(otherDeveloper.vSeniorityLevel);
                 if (developersComparison != 0) {
                     return developersComparison;
                 }
@@ -31,15 +34,15 @@ namespace CTS.BusinessLayer.Users
             throw new System.NotImplementedException();
         }
 
-        public static string DoTask(string message)
-        {
-            System.Threading.Thread.Sleep(1000);
-            Console.WriteLine(message);
-            return message;
-        }
-
-        public static void DoWork(DisplayMessage del) {
-            del("Developer at work!");
+        public void DoWork(DisplayMessage del) {
+            {
+                System.Threading.Tasks.Task Task = new System.Threading.Tasks.Task(() => {
+                    System.Threading.Thread.Sleep(1000);
+                    del("Developer at work!");
+                });
+                Task.Start();
+                Task.Wait();
+            }
         }
     }
 }

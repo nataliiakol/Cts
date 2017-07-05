@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ClassLibrary1.Tasks
+namespace CTS.BusinessLayer.Tasks
 {
     public class Task : IComparable
     {
@@ -40,7 +36,7 @@ namespace ClassLibrary1.Tasks
             }
         }
            else
-             throw new ArgumentException("Object is not a Tester");
+             throw new ArgumentException("Object is not a Task");
     }
 }
 }

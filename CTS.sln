@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTS.ApplicationLayer", "CTS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTS.BusinessLayer", "CTS.BusinessLayer\CTS.BusinessLayer.csproj", "{2A9AFD73-D191-4B6F-9C04-A2D549A13E0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTS.Reports", "CTS.Reports\CTS.Reports.csproj", "{6ECC8A73-5E51-41E6-8671-474AAE0760B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2A9AFD73-D191-4B6F-9C04-A2D549A13E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A9AFD73-D191-4B6F-9C04-A2D549A13E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A9AFD73-D191-4B6F-9C04-A2D549A13E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECC8A73-5E51-41E6-8671-474AAE0760B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECC8A73-5E51-41E6-8671-474AAE0760B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECC8A73-5E51-41E6-8671-474AAE0760B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECC8A73-5E51-41E6-8671-474AAE0760B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
