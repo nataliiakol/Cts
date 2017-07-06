@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace CTS.BusinessLayer.Users {
 
@@ -8,6 +10,7 @@ namespace CTS.BusinessLayer.Users {
         public string UserId { get; set; }
         public string Name { get; set; }
         public int Salary { get; set; }
+        public static List<string> salaryLog { get; set; }
         public SeniorityLevel vSeniorityLevel { get; set; }
 
         public enum SeniorityLevel {
@@ -25,8 +28,8 @@ namespace CTS.BusinessLayer.Users {
             CompanyStorage.OnSalaryGiven += new SalaryTime(ReceiveSalary);
         }
 
-        public void ReceiveSalary() {           
-            Console.WriteLine("My name is " + Name + ", I received "+Salary);
+        public void ReceiveSalary() {        
+            salaryLog.Add("My name is " + Name + ", I received "+Salary);
         }
 
         public override string ToString() {

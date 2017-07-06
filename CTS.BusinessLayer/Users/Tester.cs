@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using CTS.BusinessLayer.Tasks;
 
 namespace CTS.BusinessLayer.Users
@@ -16,7 +17,11 @@ namespace CTS.BusinessLayer.Users
         }
 
         public override string ToString() {
-            return "Tester\r\n" + "Name: " + Name + "\r\n" + "Salary: " +Salary;
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Tester");
+            sb.AppendLine("Name: " + Name);
+            sb.AppendLine("Salary: " + Salary);
+            return sb.ToString();
         }
 
         public int CompareTo(object obj) {

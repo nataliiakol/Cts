@@ -11,6 +11,7 @@ namespace CTS.BusinessLayer.Users
         string UserId { get; set; }
         string Name { get; set; }
         int Salary { get; set; }
+       
         void ReceiveSalary();
     }
 }

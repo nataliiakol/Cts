@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using CTS.BusinessLayer;
 using CTS.BusinessLayer.Users;
@@ -11,15 +12,17 @@ namespace CTS.ApplicationLayer
 {
     public class Program
     {
+        [STAThread]
         public static void Main(string[] args)
         {
             Application.FillData();
-            Application.CompanyGiveSalary();
-            Application.CompanyGiveTasks();
-            Reports.Reports.GenerateDevelopersReportByLevel(CompanyStorage.Developers);
-            Reports.Reports.GenerateReportSortedTestersBySalary(CompanyStorage.Testers);
-            Reports.Reports.GenerateReportFindUsersByName(CompanyStorage.Developers, CompanyStorage.Testers);
-            Reports.Reports.GenerateReportSortedDevelopersByTasksAmount(CompanyStorage.Developers);
+            //Application.CompanyGiveSalary();
+            //Application.CompanyGiveTasks();
+            //Reports.Reports.GenerateDevelopersReportByLevel(CompanyStorage.Developers);
+           // Reports.Reports.GenerateReportSortedTestersBySalary(CompanyStorage.Testers);
+           // Reports.Reports.GenerateReportFindUsersByName(CompanyStorage.Developers, CompanyStorage.Testers);
+           // Reports.Reports.GenerateReportSortedDevelopersByTasksAmount(CompanyStorage.Developers);
+           
         }
     }
 }

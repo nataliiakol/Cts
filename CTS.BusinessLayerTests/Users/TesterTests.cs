@@ -1,4 +1,6 @@
-﻿using CTS.BusinessLayer.Users;
+﻿using System;
+using System.Text;
+using CTS.BusinessLayer.Users;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CTS.BusinessLayerTests.Users
@@ -32,10 +34,14 @@ namespace CTS.BusinessLayerTests.Users
         [TestMethod()]
         public void ToStringTest()
         {
-            string expectedResult = "Tester\r\nName: NIK\r\nSalary: 1000";
             var tester = new Tester();
             tester.Name = "NIK";
             tester.Salary = 1000;
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Tester");
+            sb.AppendLine("Name: NIK");
+            sb.AppendLine("Salary: 1000");
+            string expectedResult = sb.ToString();
             string actualResult = tester.ToString();
             Assert.AreEqual(expectedResult, actualResult);
         }
